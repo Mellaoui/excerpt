@@ -1,0 +1,30 @@
+{
+    "name": "mellaoui/excerpt",
+    "description": "A simple package to create an excerpt out of Long text",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Mellaoui\\Excerpt\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Mellaoui\\Excerpt\\Tests\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Mellaoui Mohammed elghazali",
+            "email": "e.mellaoui@gmail.com"
+        }
+    ],
+    "require-dev": {
+        "pestphp/pest": "^2.19"
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    }
+}
