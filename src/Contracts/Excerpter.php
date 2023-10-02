@@ -7,6 +7,6 @@ interface Excerpter
     /**
      * this function gives the excerpt
      */
-    public function excerpt($text, $length);
+    public function excerpt( $text, $length);
 
 }

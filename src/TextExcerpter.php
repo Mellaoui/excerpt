@@ -13,20 +13,21 @@ class TextExcerpter implements Contracts\Excerpter
      */
     public function excerpt($text, $length)
     {
-        // TODO: Implement excerpt() method.
         // Remove HTML tags and trim white spaces
         $text = trim(strip_tags($text));
 
-        // Check if the text length is greater than the specified length
-        if (strlen($text) > $length) {
-            // Find the last space within the specified length
-            $last_space = strrpos(substr($text, 0, $length), ' ');
+        // Explode the text into an array of words
+        $words = explode(' ', $text);
 
-            // Trim the text to the last space and append ellipses
-            $excerpt = substr($text, 0, $last_space) . '...';
-        } else {
-            // If the text is shorter than the specified length, use the original text
-            $excerpt = $text;
+        // Take the specified number of words from the beginning of the array
+        $excerptWords = array_slice($words, 0, $length);
+
+        // Join the words back into a string
+        $excerpt = implode(' ', $excerptWords);
+
+        // If the original text has more words than the specified count, append ellipses
+        if (count($words) > $length) {
+            $excerpt .= '...';
         }
 
         return $excerpt;
