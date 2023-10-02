@@ -2,9 +2,6 @@
 
 namespace Mellaoui\Excerpt;
 
-use Mellaoui\Excerpt\Contracts\Excerpter;
-use phpDocumentor\Reflection\Types\String_;
-
 class TextExcerpter implements Contracts\Excerpter
 {
 
@@ -32,4 +29,5 @@ class TextExcerpter implements Contracts\Excerpter
 
         return $excerpt;
     }
+
 }
