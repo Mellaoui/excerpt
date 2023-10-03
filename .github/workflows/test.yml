@@ -41,4 +41,4 @@ jobs:
             }}-composer-
       - name: Install Composer dependencies
         run: >
-              composer install --prefer-stable --no-interaction
+              composer install --no-interaction
