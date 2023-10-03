@@ -18,7 +18,6 @@ class MarkdownExcerpter implements Excerpter
      */
     public function excerpt($text, $length): string
     {
-        // TODO: Implement excerpt() method.
         $text = $this->converter->convert($text);
         // Remove HTML tags and trim white spaces
         $text = trim(strip_tags($text));
