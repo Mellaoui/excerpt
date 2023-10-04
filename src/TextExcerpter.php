@@ -4,9 +4,8 @@ namespace Mellaoui\Excerpt;
 
 class TextExcerpter implements Contracts\Excerpter
 {
-
     /**
-     * @inheritDoc
+     * {@inheritDoc}
      */
     public function excerpt($text, $length): string
     {
@@ -29,5 +28,4 @@ class TextExcerpter implements Contracts\Excerpter
 
         return $excerpt;
     }
-
 }
