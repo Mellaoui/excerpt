@@ -1,7 +1,7 @@
 
 # Excerpt Generator PHP package
 
-A simple package to create an excerpt out of Long text this package is for learning
+A simple package to generate an excerpt from a given text, *this package is for learning purposes*
 
 
 ## Badges
@@ -13,7 +13,7 @@ A simple package to create an excerpt out of Long text this package is for learn
 
 ## Documentation
 
-in order to start working ton the porject check the requirements 👇
+In order to start working ton the porject check the requirements 👇
 
 
 **php 8.1**
@@ -47,9 +47,9 @@ Please review these guidelines before submitting any pull requests.
 
 **Process**
 
-1.  Fork the project
-2.  Create a new branch
-3.  Code, test, commit and push
+1.  Fork the project.
+2.  Create a new branch.
+3.  Code, test, commit and push.
 4.  Open a pull request detailing your changes.
 
 

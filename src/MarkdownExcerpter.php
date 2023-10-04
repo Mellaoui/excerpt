@@ -2,23 +2,26 @@
 
 namespace Mellaoui\Excerpt;
 
+use League\CommonMark\CommonMarkConverter;
 use League\CommonMark\Exception\CommonMarkException;
 use Mellaoui\Excerpt\Contracts\Excerpter;
-use League\CommonMark\CommonMarkConverter;
+
 class MarkdownExcerpter implements Excerpter
 {
-    public function __construct( private $converter =  new CommonMarkConverter())
+    public function __construct(private $converter = new CommonMarkConverter())
     {
-
+        // ...
     }
 
     /**
-     * @inheritDoc
+     * {@inheritDoc}
+     *
      * @throws CommonMarkException
      */
     public function excerpt($text, $length): string
     {
         $text = $this->converter->convert($text);
+
         // Remove HTML tags and trim white spaces
         $text = trim(strip_tags($text));
 
