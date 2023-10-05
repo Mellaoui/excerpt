@@ -5,8 +5,7 @@ namespace Mellaoui\Excerpt\Contracts;
 interface Excerpter
 {
     /**
-     * this function gives the excerpt
+     * Generate an excerpt from the given text.
      */
-    public function excerpt( $text, $length);
-
+    public function excerpt($text, $length);
 }
