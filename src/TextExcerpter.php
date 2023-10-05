@@ -7,12 +7,8 @@ use Exception;
 class TextExcerpter implements Contracts\Excerpter
 {
     /**
-<<<<<<< HEAD
-     * @inheritDoc
      * @throws Exception
-=======
      * {@inheritDoc}
->>>>>>> 33462666f83fae07223feadd993068f6f9119860
      */
     public function excerpt($text, $length): string
     {
@@ -31,7 +27,6 @@ class TextExcerpter implements Contracts\Excerpter
 
         return $excerpt;
     }
-<<<<<<< HEAD
 
     /**
      * @throws Exception
@@ -44,6 +39,6 @@ class TextExcerpter implements Contracts\Excerpter
     }
 
 }
-=======
-}
->>>>>>> 33462666f83fae07223feadd993068f6f9119860
+
+
+

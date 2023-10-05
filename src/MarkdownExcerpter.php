@@ -2,13 +2,11 @@
 
 namespace Mellaoui\Excerpt;
 
-<<<<<<< HEAD
-use Exception;
 
-=======
+use Exception;
 use League\CommonMark\CommonMarkConverter;
 use League\CommonMark\Exception\CommonMarkException;
->>>>>>> 33462666f83fae07223feadd993068f6f9119860
+
 use Mellaoui\Excerpt\Contracts\Excerpter;
 
 class MarkdownExcerpter implements Excerpter
@@ -19,25 +17,15 @@ class MarkdownExcerpter implements Excerpter
     }
 
     /**
-<<<<<<< HEAD
-     * @inheritDoc
      * @throws Exception
-=======
      * {@inheritDoc}
-     *
-     * @throws CommonMarkException
->>>>>>> 33462666f83fae07223feadd993068f6f9119860
      */
     public function excerpt($text, $length): string
     {
         $this->validateLength($length);
 
         $text = $this->converter->convert($text);
-<<<<<<< HEAD
-=======
 
-        // Remove HTML tags and trim white spaces
->>>>>>> 33462666f83fae07223feadd993068f6f9119860
         $text = trim(strip_tags($text));
 
         $words = explode(' ', $text);
@@ -50,7 +38,7 @@ class MarkdownExcerpter implements Excerpter
 
         return $excerpt;
     }
-<<<<<<< HEAD
+
 
 
     /**
@@ -63,6 +51,5 @@ class MarkdownExcerpter implements Excerpter
         }
     }
 }
-=======
-}
->>>>>>> 33462666f83fae07223feadd993068f6f9119860
+
+
