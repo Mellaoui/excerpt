@@ -2,11 +2,8 @@
 
 namespace Mellaoui\Excerpt;
 
-
 use Exception;
 use League\CommonMark\CommonMarkConverter;
-use League\CommonMark\Exception\CommonMarkException;
-
 use Mellaoui\Excerpt\Contracts\Excerpter;
 
 class MarkdownExcerpter implements Excerpter
@@ -26,12 +23,19 @@ class MarkdownExcerpter implements Excerpter
 
         $text = $this->converter->convert($text);
 
+        // Remove HTML tags and trim white spaces
         $text = trim(strip_tags($text));
 
+        // Explode the text into an array of words
         $words = explode(' ', $text);
+
+        // Take the specified number of words from the beginning of the array
         $excerptWords = array_slice($words, 0, $length);
+
+        // Join the words back into a string
         $excerpt = implode(' ', $excerptWords);
 
+        // If the original text has more words than the specified count, append ellipses
         if (count($words) > $length) {
             $excerpt .= '...';
         }
@@ -39,17 +43,13 @@ class MarkdownExcerpter implements Excerpter
         return $excerpt;
     }
 
-
-
     /**
      * @throws Exception
      */
-    private  function  validateLength($length): void
+    private function validateLength($length): void
     {
-        if($length <= 0 ){
-            throw new Exception('number must be greater or equal to 0');
+        if ($length < 1) {
+            throw new Exception('the length must be greater than 0');
         }
     }
 }
-
-
