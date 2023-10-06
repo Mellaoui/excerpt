@@ -2,11 +2,8 @@
 
 namespace Mellaoui\Excerpt;
 
-
 use Exception;
 use League\CommonMark\CommonMarkConverter;
-use League\CommonMark\Exception\CommonMarkException;
-
 use Mellaoui\Excerpt\Contracts\Excerpter;
 
 class MarkdownExcerpter implements Excerpter
@@ -39,17 +36,13 @@ class MarkdownExcerpter implements Excerpter
         return $excerpt;
     }
 
-
-
     /**
      * @throws Exception
      */
-    private  function  validateLength($length): void
+    private function validateLength($length): void
     {
-        if($length <= 0 ){
+        if ($length <= 0) {
             throw new Exception('number must be greater or equal to 0');
         }
     }
 }
-
-

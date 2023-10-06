@@ -31,14 +31,10 @@ class TextExcerpter implements Contracts\Excerpter
     /**
      * @throws Exception
      */
-    private  function  validateLength($length): void
+    private function validateLength($length): void
     {
-        if($length <= 0 ){
+        if ($length <= 0) {
             throw new Exception('number must be greater or equal to 0');
         }
     }
-
 }
-
-
-
