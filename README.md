@@ -25,13 +25,13 @@ In order to start working ton the porject check the requirements 👇
 
 ## Installation
 
-first clone the repo
+First clone the repo
 
 ```bash
   git clone https://github.com/Mellaoui/excerpt.git
 ```
 
-install composer dependencies
+Install composer dependencies
 
 ```bash
  cd excerpt
