@@ -26,7 +26,7 @@ class TextExcerpter implements Contracts\Excerpter
         // Join the words back into a string
         $excerpt = implode(' ', $excerptWords);
 
-        // If the original text has more words than the specified count, append ellipses   
+        // If the original text has more words than the specified count, append ellipses
         if (count($words) > $length) {
             $excerpt .= '...';
         }

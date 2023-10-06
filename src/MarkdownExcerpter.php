@@ -48,6 +48,7 @@ class MarkdownExcerpter implements Excerpter
      */
     private function validateLength($length): void
     {
+
         if ($length < 1) {
             throw new Exception('the length must be greater than 0');
         }
