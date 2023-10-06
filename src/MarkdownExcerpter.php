@@ -23,12 +23,19 @@ class MarkdownExcerpter implements Excerpter
 
         $text = $this->converter->convert($text);
 
+        // Remove HTML tags and trim white spaces
         $text = trim(strip_tags($text));
 
+        // Explode the text into an array of words
         $words = explode(' ', $text);
+
+        // Take the specified number of words from the beginning of the array
         $excerptWords = array_slice($words, 0, $length);
+
+        // Join the words back into a string
         $excerpt = implode(' ', $excerptWords);
 
+        // If the original text has more words than the specified count, append ellipses
         if (count($words) > $length) {
             $excerpt .= '...';
         }
@@ -41,8 +48,13 @@ class MarkdownExcerpter implements Excerpter
      */
     private function validateLength($length): void
     {
+<<<<<<< HEAD
         if ($length <= 0) {
             throw new Exception('number must be greater or equal to 0');
+=======
+        if ($length < 1) {
+            throw new Exception('the length must be greater than 0');
+>>>>>>> b922c75965e4e7f5ad3893c0e71b5352a4f1d2f0
         }
     }
 }
